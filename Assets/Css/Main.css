@@ -1,0 +1,190 @@
+/* Body */
+
+@import url('https://fonts.googleapis.com/css2?family=Basic:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: "Basic", sans-serif;
+    background: #fff;
+    color: #222;
+}
+
+
+/* Navbar */
+
+.navbar-toggler {
+    transition: 0.3s;
+}
+
+.navbar-toggler:hover {
+    transition: 0.3s;
+    background: #f0f0f0;
+}
+
+.navbar {
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    background: #fff;
+    box-shadow: none;
+    border-bottom: solid 1px #d1d5db;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.nav-link {
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+    border-radius: 10px;
+    background: #f0f0f0;
+    color: #000;
+    transition: 0.3s;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    border: none;
+    background: #f0f0f0;
+    transition: 0.3s;
+}
+
+input:focus {
+    background: #fff;
+    border: solid 1px;
+}
+
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    background: #fff;
+    border-radius: 18px;
+}
+
+.hero h1,
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 32px;
+}
+
+.btn-secondary:hover {
+    transition: 0.3s;
+}
+
+
+/* Berita */
+
+.berita {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-left: 6px solid #000000;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.berita:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Gambar */
+
+.berita img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* Konten */
+
+.berita .konten {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Judul */
+
+.berita h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.berita h2 a {
+    color: #111827;
+    text-decoration: none;
+}
+
+.berita h2 a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+
+/* Tanggal */
+
+.berita .tanggal {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+
+/* Isi */
+
+.berita p {
+    margin: 0;
+    color: #374151;
+    line-height: 1.6;
+}
+
+
+/* Responsif */
+
+@media (max-width: 768px) {
+    .berita {
+        grid-template-columns: 1fr;
+    }
+    .berita img {
+        height: 220px;
+    }
+}
+
+
+/* Footer */
+
+.footer {
+    color: gray;
+    text-align: center;
+}
