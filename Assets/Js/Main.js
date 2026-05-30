@@ -3,28 +3,28 @@ const berita = [{
         tanggal: "27 Mei 2025",
         isi: "Teknologi AI kini mampu meniru suara manusia dengan sangat realistis.",
         gambar: "img/ai.jpg",
-        link: "https://theconversation.com/kecerdasan-buatan-makin-canggih-ahli-jawab-kemungkinan-ai-punya-jiwa-dan-bisa-memprediksi-sesuatu-202625",
+        link: "news/kecerdasan-ai.html",
     },
     {
         judul: "Inovasi Robotik di Sekolah",
         tanggal: "26 Mei 2025",
         isi: "Pelajar SMA menciptakan robot penyapu otomatis untuk lomba nasional.",
         gambar: "img/robotik.jpg",
-        link: "https://www.antaranews.com/berita/3264641/siswa-man-2-malang-ciptakan-robot-penyapu-sampah-jalanan",
+        link: "news/inovasi-robotik.html",
     },
     {
         judul: "Perkembangan Internet 6G",
         tanggal: "25 Mei 2025",
         isi: "Para peneliti mulai menguji kecepatan jaringan 6G di beberapa negara.",
         gambar: "img/internet.jpg",
-        link: "https://builtin.com/hardware/6g",
+        link: "news/internet-6G.html",
     },
     {
         judul: "Chip Komputer Terbaru Rilis",
         tanggal: "24 Mei 2025",
         isi: "Chip generasi baru dari TechNova diklaim 2x lebih hemat energi.",
         gambar: "img/chip.jpg",
-        link: "https://tekno.kompas.com/read/2025/02/23/19000087/microsoft-rilis-chip-kuantum-majorana-1-untuk-komputasi-skala-besar",
+        link: "news/chip-komputer.html"
     },
     {
         judul: "Teknologi VR Semakin Nyata",
@@ -104,39 +104,41 @@ const searchInput = document.getElementById("search");
 // Fungsi tampilkan berita
 function tampilkanBerita(data) {
     container.innerHTML = "";
+
     if (data.length === 0) {
-        container.innerHTML = "<p><em>Tidak ada berita ditemukan.</em></p>";
+        container.innerHTML =
+            "<p><em>Tidak ada berita ditemukan.</em></p>";
         return;
     }
 
     data.forEach((item) => {
-                container.innerHTML += `
-      <div class="berita">
-        <img src="${item.gambar}" alt="${item.judul}">
-        <div class="konten">
-          <h2>${item.judul}</h2>
-          <p class="tanggal">${item.tanggal}</p>
-          <p>${item.isi}</p>
-          ${
-            item.link
-              ? `<a href="${item.link}" target="_blank" class="btn btn-outline-secondary mt-4">Read More</a>`
-              : ""
-          }
-        </div>
-      </div>
-    `;
-  });
-}
+        container.innerHTML += `
+        <div class="berita">
+            <img src="${item.gambar}" alt="${item.judul}">
+            <div class="konten">
+                <h2>${item.judul}</h2>
+                <p class="tanggal">${item.tanggal}</p>
+                <p>${item.isi}</p>
 
+                <button
+                    class="btn btn-outline-secondary mt-4"
+                    onclick="window.location.href='${item.link}'">
+                    Read More
+                </button>
+            </div>
+        </div>
+        `;
+    });
+}
 tampilkanBerita(berita);
 
 // Fitur pencarian
-searchInput.addEventListener("input", function () {
-  const keyword = this.value.toLowerCase();
-  const hasil = berita.filter(
-    (item) =>
-      item.judul.toLowerCase().includes(keyword) ||
-      item.isi.toLowerCase().includes(keyword)
-  );
-  tampilkanBerita(hasil);
+searchInput.addEventListener("input", function() {
+    const keyword = this.value.toLowerCase();
+    const hasil = berita.filter(
+        (item) =>
+        item.judul.toLowerCase().includes(keyword) ||
+        item.isi.toLowerCase().includes(keyword)
+    );
+    tampilkanBerita(hasil);
 });
