@@ -24,28 +24,28 @@ const berita = [{
         tanggal: "24 Mei 2025",
         isi: "Chip generasi baru dari TechNova diklaim 2x lebih hemat energi.",
         gambar: "img/chip.jpg",
-        link: "news/chip-komputer.html"
+        link: "news/chip-komputer.html",
     },
     {
         judul: "Teknologi VR Semakin Nyata",
         tanggal: "23 Mei 2025",
         isi: "Pengalaman Virtual Reality kini bisa menciptakan sensasi sentuhan melalui sarung tangan pintar.",
         gambar: "img/vr.jpg",
-        link: "https://fasilkom.esaunggul.ac.id/virtual-reality-pengalaman-mayarakat-dunia-maya-yang-semakin-nyata/",
+        link: "news/teknologi-vr.html",
     },
     {
         judul: "Mobil Listrik dengan Jarak Tempuh 1000km",
         tanggal: "22 Mei 2025",
         isi: "Perusahaan otomotif meluncurkan mobil listrik yang bisa menempuh lebih dari 1000km dalam satu kali isi ulang.",
         gambar: "img/mobil-listrik.jpg",
-        link: "https://www.antaranews.com/berita/3893076/sedan-listrik-y6-meluncur-dengan-jarak-tempuh-1000-km",
+        link: "news/mobil-listrik.html",
     },
     {
         judul: "Startup Indonesia Luncurkan Aplikasi Pembelajaran AI",
         tanggal: "21 Mei 2025",
         isi: "Aplikasi ini memudahkan pelajar memahami konsep AI melalui simulasi dan kuis interaktif.",
         gambar: "img/startup.jpg",
-        link: "https://smart24update.com/inovasi-teknologi-startup-indonesia-luncurkan-aplikasi-pembelajaran-berbasis-ai-untuk-siswa/",
+        link: "news/startup-indonesia.html",
     },
     {
         judul: "Perangkat Wearable untuk Kesehatan Jantung",
